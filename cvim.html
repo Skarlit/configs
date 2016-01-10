@@ -1,0 +1,110 @@
+<html>
+<head>
+	<style type="text/css">
+		tr {
+			border-radius: 6px;
+		}
+		tr:nth-child(2n) {
+			background-color: #f6f6f6;
+		}
+		tr:nth-child(2n+1) {
+			background-color: #dadada;
+		}
+		table {
+			border: 1px solid #cacaca;
+			border-radius: 6px;
+		}
+		td {
+			padding: 0px 5px;
+			font-size: 9px;
+		}
+
+		.title {
+			padding: 0;
+			font-size: 11px;
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+<table>
+<tr><td class="title">Movement</td><td></td><td></td></tr>
+<tr><td>j, s</td><td>scroll down</td><td>scrollDown</td></tr>
+<tr><td>k, w</td><td>scroll up</td><td>scrollUp</td></tr>
+<tr><td>h</td><td>scroll left</td><td>scrollLeft</td></tr>
+<tr><td>l</td><td>scroll right</td><td>scrollRight</td></tr>
+<tr><td>d</td><td>scroll half-page down</td><td>scrollPageDown</td></tr>
+<tr><td>u, e</td><td>scroll half-page up</td><td>scrollPageUp</td></tr>
+<tr><td>gg</td><td>scroll to the top of the page</td><td>scrollToTop</td></tr>
+<tr><td>G</td><td>scroll to the bottom of the page</td><td>scrollToBottom</td></tr>
+<tr><td>gi</td><td>go to first input box</td><td>goToInput</td></tr>
+<tr><td>gI</td><td>go to the last focused input box by gi</td><td>goToLastInput</td></tr>
+<tr><td>zz</td><td>center page to current search match (middle)</td><td>centerMatchH</td></tr>
+
+<tr><td class="title">Link Hints</td><td></td><td></td></tr>
+<tr><td>f</td><td>open link in current tab</td><td>createHint</td></tr>
+<tr><td>F</td><td>open link in new tab</td><td>createTabbedHint</td></tr>
+<tr><td>W</td><td>open link in new window</td><td>createHintWindow</td></tr>
+<tr><td>gy</td><td>copy URL from link to clipboard</td><td>yankUrl</td></tr>
+<tr><td>gr</td><td>reverse image search (google images)</td><td>reverseImage</td></tr>
+<tr><td>;</td><td>change the link hint focus</td><td></td></tr>
+
+<tr><td class="title">Miscellaneous</td><td></td><td></td></tr>
+<tr><td>.</td><td>repeat the last command</td><td>repeatCommand</td></tr>
+<tr><td>:</td><td>open command bar</td><td>openCommandBar</td></tr>
+<tr><td>/</td><td>open search bar</td><td>openSearchBar</td></tr>
+<tr><td>?</td><td>open search bar (reverse search)</td><td>openSearchBarReverse</td></tr>
+<tr><td>I</td><td>search through browser history</td><td>:history</td></tr>
+<tr><td>i</td><td>enter insert mode (escape to exit)</td><td>insertMode</td></tr>
+<tr><td>r</td><td>reload the current tab</td><td>reloadTab</td></tr>
+<tr><td>gR</td><td>reload the current tab + local cache</td><td>reloadTabUncached</td></tr>
+<tr><td>;&lt;*&gt;</td><td>create mark &lt;*&gt;</td><td>setMark</td></tr>
+<tr><td>''</td><td>go to last scroll position</td><td>lastScrollPosition</td></tr>
+<tr><td>'&lt;*&gt;</td><td>go to mark &lt;*&gt;</td><td>goToMark</td></tr>
+<tr><td>cr</td><td>reload all tabs but current</td><td>reloadAllButCurrent</td></tr>
+<tr><td>z&lt;Enter&gt;</td><td>toggle image zoom (same as clicking the image on image-only pages)</td><td>toggleImageZoom</td></tr>
+<tr><td>gd</td><td>alias to :chrome://downloads&lt;CR&gt;</td><td>:chrome://downloads&lt;CR&gt;
+<tr><td>yh</td><td>copy the currently matched text from find mode (if any)</td><td>yankHighlight</td></tr>
+<tr><td>b</td><td>search through bookmarks</td><td>:bookmarks</td></tr>
+<tr><td>p</td><td>open the clipboard selection</td><td>openPaste</td></tr>
+<tr><td>P</td><td>open the clipboard selection in a new tab</td><td>openPasteTab</td></tr>
+<tr><td>gj</td><td>hide the download shelf</td><td>hideDownloadsShelf</td></tr>
+<tr><td>gq</td><td>stop the current tab from loading</td><td>cancelWebRequest</td></tr>
+<tr><td>gQ</td><td>stop all tabs from loading</td><td>cancelAllWebRequests</td></tr>
+<tr><td>gu</td><td>go up one path in the URL</td><td>goUpUrl</td></tr>
+<tr><td>gU</td><td>go to to the base URL</td><td>goToRootUrl</td></tr>
+<tr><td>gs</td><td>go to the view-source:// page for the current Url</td><td>:viewsource!
+<tr><td>&lt;C-b&gt;</td><td>create or toggle a bookmark for the current URL</td><td>createBookmark</td></tr>
+
+<tr><td class="title">Tab Navigation</td><td></td><td></td></tr>
+<tr><td>gt, K, R</td><td>navigate to the next tab</td><td>nextTab</td></tr>
+<tr><td>gT, J, E</td><td>navigate to the previous tab</td><td>previousTab</td></tr>
+<tr><td>x</td><td>close the current tab</td><td>closeTab</td></tr>
+<tr><td>X</td><td>open the last closed tab</td><td>lastClosedTab</td></tr>
+<tr><td>t</td><td>:tabnew</td><td>:tabnew</td></tr>
+<tr><td>O</td><td>:open &lt;CURRENT URL&gt;</td><td>:open @%
+<tr><td>&lt;N&gt;%</td><td>switch to tab &lt;N&gt;</td><td>goToTab</td></tr>
+<tr><td>H, S</td><td>go back</td><td>goBack</td></tr>
+<tr><td>L, D</td><td>go forward</td><td>goForward</td></tr>
+<tr><td>B</td><td>search for another active tab</td><td>:buffer</td></tr>
+<tr><td>gp</td><td>pin/unpin the current tab</td><td>pinTab</td></tr>
+<tr><td>&lt;C-6&gt;</td><td>toggle the focus between the last used tabs</td><td>lastUsedTab</td></tr>
+
+<tr><td class="title">Find Mode</td><td></td><td></td></tr>
+<tr><td>n</td><td>next search result</td><td>nextSearchResult</td></tr>
+<tr><td>N</td><td>previous search result</td><td>previousSearchResult</td></tr>
+<tr><td>v</td><td>enter visual/caret mode (highlight current search/selection)</td><td>toggleVisualMode</td></tr>
+<tr><td>V</td><td>enter visual line mode from caret mode/currently highlighted search</td><td>toggleVisualLineMode</td></tr>
+
+<tr><td class="title">Visual/Caret Mode</td><td></td><td></td></tr>
+<tr><td>&lt;Esc&gt;</td><td>exit visual mode to caret mode/exit caret mode to normal mode</td><td></td></tr>
+<tr><td>v</td><td>toggle between visual/caret mode</td><td></td></tr>
+<tr><td>h, j, k, l</td><td>move the caret position/extend the visual selection</td><td></td></tr>
+<tr><td>y</td><td>copys the current selection</td><td></td></tr>
+<tr><td>n</td><td>select the next search result</td><td></td></tr>
+<tr><td>N</td><td>select the previous search result</td><td></td></tr>
+<tr><td>p</td><td>open highlighted text in current tab</td><td></td></tr>
+<tr><td>P</td><td>open highlighted text in new tab</td></tr>
+</table>
+</body>
+</html>
